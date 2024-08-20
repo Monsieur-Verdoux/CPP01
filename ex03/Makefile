@@ -6,13 +6,13 @@
 #    By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/12 18:22:25 by akovalev          #+#    #+#              #
-#    Updated: 2024/08/20 18:44:00 by akovalev         ###   ########.fr        #
+#    Updated: 2024/08/20 19:24:50 by akovalev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := zombieHorde
+NAME := UnnecessaryViolence
 CFLAGS := -Wall -Wextra -Werror
-SRC := main.cpp Zombie.cpp zombieHorde.cpp
+SRC := main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)

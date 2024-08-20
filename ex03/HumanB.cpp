@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/12 18:26:37 by akovalev          #+#    #+#             */
-/*   Updated: 2024/08/20 18:27:07 by akovalev         ###   ########.fr       */
+/*   Created: 2024/08/20 18:55:34 by akovalev          #+#    #+#             */
+/*   Updated: 2024/08/20 20:00:26 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "HumanB.hpp"
+#include <iostream>
 
-# include <string>
-
-class Zombie
+HumanB::HumanB(std::string new_name) : name(new_name), weapon(nullptr)
 {
-	private:
-		std::string name;
-	public:
-		void	announce();
-		void	give_name(std::string nm);
-		Zombie();
-		~Zombie();
-};
+}
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+HumanB::~HumanB()
+{
+}
 
-#endif
+void HumanB::attack()
+{
+	if (weapon)
+		std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon& new_weapon)
+{
+	weapon = &new_weapon;
+}
