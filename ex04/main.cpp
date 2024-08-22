@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 20:04:38 by akovalev          #+#    #+#             */
-/*   Updated: 2024/08/20 21:17:03 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/08/22 14:49:51 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 int	replace_strings(std::string filename, std::string s1, std::string s2)
 {
-	std::fstream	file;
+	std::fstream	file(filename, std::ios::in);
 	std::fstream	newfile;
 	std::string		line;
 	size_t			searhing;
 	
-	file.open(filename, std::ios::in);
 	if (!file.is_open())
 	{
 		std::cout << "Failure opening input file" << std::endl;
