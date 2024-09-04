@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 18:26:37 by akovalev          #+#    #+#             */
-/*   Updated: 2024/08/20 18:30:16 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/08/28 19:22:13 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class Zombie
 
 };
 
-Zombie* zombieHorde( int N, std::string name);
+Zombie* zombieHorde( int N, std::string name );
 
 #endif

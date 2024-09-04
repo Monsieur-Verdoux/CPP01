@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 20:04:38 by akovalev          #+#    #+#             */
-/*   Updated: 2024/08/22 14:49:51 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/08/27 19:48:15 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	replace_strings(std::string filename, std::string s1, std::string s2)
 	std::fstream	file(filename, std::ios::in);
 	std::fstream	newfile;
 	std::string		line;
-	size_t			searhing;
+	size_t			searching;
 	
 	if (!file.is_open())
 	{
@@ -33,12 +33,12 @@ int	replace_strings(std::string filename, std::string s1, std::string s2)
 	}
 	while (std::getline(file, line))
 	{
-		searhing = line.find(s1);
-		while (searhing != std::string::npos)
+		searching = line.find(s1);
+		while (searching != std::string::npos)
 		{
-			line.erase(searhing, s1.length());
-			line.insert(searhing, s2);
-			searhing = line.find(s1);
+			line.erase(searching, s1.length());
+			line.insert(searching, s2);
+			searching = line.find(s1);
 		}
 		newfile << line;
 		if (!file.eof())

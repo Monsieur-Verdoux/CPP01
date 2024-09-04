@@ -6,12 +6,12 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 18:26:26 by akovalev          #+#    #+#             */
-/*   Updated: 2024/08/14 19:13:38 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/04 17:48:09 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-# include <iostream>
+#include <iostream>
 
 Zombie::Zombie()
 {
