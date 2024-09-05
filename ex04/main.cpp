@@ -6,7 +6,7 @@
 /*   By: akovalev <akovalev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 20:04:38 by akovalev          #+#    #+#             */
-/*   Updated: 2024/08/27 19:48:15 by akovalev         ###   ########.fr       */
+/*   Updated: 2024/09/05 15:54:10 by akovalev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	replace_strings(std::string filename, std::string s1, std::string s2)
 		{
 			line.erase(searching, s1.length());
 			line.insert(searching, s2);
-			searching = line.find(s1);
+			searching = line.find(s1, searching + s2.length());
 		}
 		newfile << line;
 		if (!file.eof())
